@@ -1,9 +1,9 @@
 import React from 'react';
 
-var App = React.createClass({
-  render: function () {
-    return <div id="jsx">Hello JSX!!</div>;
+class HelloMessage extends React.Component {
+  render() {
+    return <div>Hello {this.props.name}</div>;
   }
-});
+}
 
-React.render(<App />, document.body);
+React.render(<HelloMessage name="Nikolaus" />, document.body);
